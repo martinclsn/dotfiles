@@ -1,0 +1,6 @@
+alias brewupdate="brew update && brew upgrade && brew doctor && brew cleanup"
+alias brewinstall="brew install tree node bash"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
