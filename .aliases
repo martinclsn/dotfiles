@@ -7,22 +7,37 @@ alias dr=docker
 alias drnoverify="dr --tlsverify=false"
 alias drm=docker-machine
 alias drc=docker-compose
-alias drmcreate='drm create -d virtualbox --virtualbox-disk-size "40000" --virtualbox-memory "4096" def'
+alias drrun="dr run -v /development:/development"
+alias drrunbash="drrun --entrypoint=bash -ti"
+alias drrmall="dr rm -f \$(dr ps -q -a)"
+alias drmcreate='drm create -d virtualbox --virtualbox-memory "4000" --virtualbox-disk-size "50000"'
+alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-share; sudo mkdir /docker-share && sudo mount -t vboxsf docker-share /docker-share"'
 
 ### Navigation ###
+alias cdd="cd \$DEVELOPMENT_HOME"
+alias cdjboss="cd \$JBOSS_HOME"
 alias ls="ls --color=auto"
 alias l.="ls -dF .*"
 alias la="ls -aF"
 alias ll="ls -lF"
+alias lla="ll -a"
 alias lld="ll | grep --color=never '^d'"
 alias ..="cd .."
-alias cdd="cd \$DEVELOPMENT_HOME"
-alias cdjboss="cd \$JBOSS_HOME"
 
 ### Development ###
 alias deploywar="cp target/*.war \$JBOSS_HOME/standalone/deployments"
 alias grunt="grunt --stack"
+alias hglog="hg log | less"
+alias hgst="hg st -q"
+alias hgpu="hg pull -u"
+alias jbossclean="pushd . && cdjboss && cd standalone && rm -rf log tmp data deployments/* && popd"
+alias jbosslog="cdjboss && less +F standalone/log/server.log"
+alias m="mvn clean install -Dmaven.javadoc.skip=true"
+alias mts="m -Dmaven.test.skip=true"
+alias mvnversionupdate="mvn versions:update-properties"
 alias npmupdate="npm -g update"
+alias startjboss="cdjboss && ./bin/standalone.sh -c standalone.xml"
+alias stopjboss="\$JBOSS_HOME/bin/jboss-cli.sh --connect command=:shutdown"
 
 ### File handling ###
 alias grep='grep --color=auto'

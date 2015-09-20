@@ -1,0 +1,7 @@
+YELLOW='\e[33m\]'
+BLACK='\e[37m\]'   
+RESET='\e[0m\]'   
+
+export PS1="\[$YELLOW\][\[$YELLOW\]\h:\w\[$YELLOW\]]\[$RESET\] "
+
+alias cdc='cd /cygdrive/c'

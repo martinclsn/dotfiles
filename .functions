@@ -1,3 +1,14 @@
+# no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function st() {
+	if [ $# -eq 0 ]; then
+		"$SUBLIME_PATH" . &
+	else
+		"$SUBLIME_PATH" "$@" &
+	fi
+}
+
+
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}"
@@ -32,26 +43,6 @@ function codepoint() {
 	# print a newline unless we’re piping the output to another program
 	if [ -t 1 ]; then
 		echo # newline
-	fi
-}
-
-# `s` with no arguments opens the current directory in Sublime Text, otherwise
-# opens the given location
-function s() {
-	if [ $# -eq 0 ]; then
-		subl .
-	else
-		subl "$@"
-	fi
-}
-
-# `o` with no arguments opens current directory, otherwise opens the given
-# location
-function o() {
-	if [ $# -eq 0 ]; then
-		open .
-	else
-		open "$@"
 	fi
 }
 

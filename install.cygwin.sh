@@ -1,3 +1,3 @@
 source install.sh
 
-link .bash_mac
+link .bash_cygwin
