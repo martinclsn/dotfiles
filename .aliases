@@ -1,14 +1,15 @@
 alias b=bash
-alias g=git
 alias h=history
-alias j=jobs
+alias x=exit
+
+### Docker ###
 alias dr=docker
 alias drnoverify="dr --tlsverify=false"
 alias drm=docker-machine
 alias drc=docker-compose
-alias x=exit
+alias drmcreate='drm create -d virtualbox --virtualbox-disk-size "40000" --virtualbox-memory "4096" def'
 
-#Navigation
+### Navigation ###
 alias ls="ls --color=auto"
 alias l.="ls -dF .*"
 alias la="ls -aF"
@@ -18,12 +19,12 @@ alias ..="cd .."
 alias cdd="cd \$DEVELOPMENT_HOME"
 alias cdjboss="cd \$JBOSS_HOME"
 
-#Development
+### Development ###
 alias deploywar="cp target/*.war \$JBOSS_HOME/standalone/deployments"
 alias grunt="grunt --stack"
 alias npmupdate="npm -g update"
 
-#File handling
+### File handling ###
 alias grep='grep --color=auto'
 alias vi=vim
 
