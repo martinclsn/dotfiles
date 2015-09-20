@@ -8,4 +8,5 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 alias ls="gls --color=auto"
- 
+
+export MY_BIN_DIR="$HOME/bin" 

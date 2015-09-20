@@ -10,5 +10,4 @@ function link {
 link .bashrc
 link .bash_profile
 link .aliases
-link .exports
 link .functions

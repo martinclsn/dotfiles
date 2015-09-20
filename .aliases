@@ -25,9 +25,6 @@ alias npmupdate="npm -g update"
 
 #File handling
 alias grep='grep --color=auto'
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
 alias vi=vim
 
 # Enable aliases to be sudo’ed
