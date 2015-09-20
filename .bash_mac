@@ -4,3 +4,8 @@ alias brewinstall="brew install tree node bash"
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+alias ls="gls --color=auto"
+ 
