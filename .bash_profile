@@ -8,10 +8,9 @@ shopt -s histappend
 shopt -s cdspell
 
 YELLOW='\e[1;93m'
-BLACK='\e[1;90m'   
 RESET='\e[0m'   
 
-export PS1="\[$BLACK\][\[$YELLOW\]\h:\w\[$BLACK\]]\[$RESET\] "
+export PS1="\[$YELLOW\][\h:\w]\[$RESET\] "
 
 # Larger bash history
 export HISTSIZE=32768
