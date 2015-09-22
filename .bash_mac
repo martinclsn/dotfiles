@@ -9,4 +9,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 alias ls="gls --color=auto"
 
-export MY_BIN_DIR="$HOME/bin" 
+export MY_BIN_DIR="$HOME/bin"
