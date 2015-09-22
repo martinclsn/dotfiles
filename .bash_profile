@@ -1,5 +1,3 @@
-export PATH="$MY_BIN_DIR:$PATH"
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 

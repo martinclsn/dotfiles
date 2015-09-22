@@ -53,3 +53,8 @@ function codepoint() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components|.idea|target' --dirsfirst "$@" | less -FRNX
 }
+
+function gcutil {
+	PID=$1
+	jstat -gcutil -h20 $PID 1000
+}
