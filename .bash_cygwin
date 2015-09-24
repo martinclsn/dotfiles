@@ -1,6 +1,15 @@
+function stl {
+	if [ -h $@ ]; then
+		st "$(cygpath -w $(readlink $@))"
+	else
+		st $@
+	fi
+}
+
 YELLOW='\e[33m\]'
 RESET='\e[0m\]'   
 
 export PS1="\[$YELLOW\][\h:\w]\[$RESET\] "
 
 alias cdc='cd /cygdrive/c'
+alias stextra="stl ~/.bash_extra"

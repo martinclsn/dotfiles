@@ -8,7 +8,7 @@ alias dr=docker
 alias drnoverify="dr --tlsverify=false"
 alias drm=docker-machine
 alias drc=docker-compose
-alias drrun="dr run -v /development:/development"
+alias drrun="dr run -v /docker-share:/docker-share --entrypoint=/bin/bash -ti"
 alias drrunbash="drrun --entrypoint=bash -ti"
 alias drrmall="dr rm -f \$(dr ps -q -a)"
 alias drmcreate='drm create -d virtualbox --virtualbox-memory "4000" --virtualbox-disk-size "50000"'
