@@ -16,6 +16,8 @@ alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-s
 
 ### Navigation ###
 alias cdd="cd \$DEVELOPMENT_HOME"
+alias cddl="cd && cd Downloads"
+alias cddesktop="cd && cd Desktop"
 alias cdjboss="cd \$JBOSS_HOME"
 alias ls="ls --color=auto --group-directories-first"
 alias l.="ls -dF .*"
