@@ -1,8 +1,8 @@
 function stl {
 	if [ -h $@ ]; then
-		st "$(cygpath -w $(readlink $@))"
+		stl "$(readlink $@)"
 	else
-		st $@
+		st "$(cygpath -w $@)"
 	fi
 }
 

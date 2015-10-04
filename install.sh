@@ -11,3 +11,5 @@ link .bashrc
 link .bash_profile
 link .aliases
 link .functions
+
+touch ~/.bash_extra
