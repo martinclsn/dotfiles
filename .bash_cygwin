@@ -14,4 +14,4 @@ export PS1="\[$YELLOW\][\h:\w]\[$RESET\] "
 alias cdc='cd /cygdrive/c'
 alias stextra="stl ~/.bash_extra"
 alias runx="run xwin -multiwindow -noclipboard" # Alternative: startxwin
-alias cygwin-update="setup-x86_64.exe --no-desktop --no-shortcuts --no-startmenu --quiet-mode --packages git,subversion,vim,curl,wget,openssh,xinit,bash,coreutils,cygutils,cygwin,dos2unix,grep,gzip,less,mercurial,python,tar,which"
+alias cygwin-update="cygwinsetup.exe --no-desktop --no-shortcuts --no-startmenu --quiet-mode --packages bash,coreutils,cygutils,cygwin,dos2unix,grep,gzip,git,subversion,vim,curl,wget,openssh,xinit,less,mercurial,python,tar,which"
