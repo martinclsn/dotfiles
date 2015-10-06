@@ -2,10 +2,16 @@ source install.sh
 
 link .bash_cygwin
 
-DOWNLOADS_DIR="$HOME/Downloads"
-[ -d "$DOWNLOADS_DIR" ] && rm -ri $DOWNLOADS_DIR
-ln -s $(cygpath -u $USERPROFILE)/Downloads $DOWNLOADS_DIR
+WINDOWS_HOME="$(cygpath -u $USERPROFILE)"
 
-DESKTOP_DIR="$HOME/Desktop"
-[ -d "$DESKTOP_DIR" ] && rm -ri $DESKTOP_DIR
-ln -s $(cygpath -u $USERPROFILE)/Desktop $DESKTOP_DIR
+function linkDirectory {
+	DIRECTORY_NAME=$1
+	DIRECTORY="$HOME/$DIRECTORY_NAME"
+	[ -d "$DIRECTORY" ] && rm -ri $DIRECTORY
+	ln -s "$WINDOWS_HOME/$DIRECTORY_NAME" $DIRECTORY
+}
+
+linkDirectory "Downloads"
+linkDirectory "Desktop"
+linkDirectory "Documents"
+linkDirectory ".m2"
