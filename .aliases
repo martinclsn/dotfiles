@@ -10,7 +10,8 @@ alias drm=docker-machine
 alias drc=docker-compose
 alias drrun="dr run -v /docker-share:/docker-share --entrypoint=/bin/bash -ti"
 alias drrunbash="drrun --entrypoint=bash -ti"
-alias drrmall="dr rm -f \$(dr ps -q -a)"
+alias drrmallcontainers="dr rm -f \$(dr ps -q -a)"
+alias drrmiallimages="drrmallcontainers; dr rmi -f \$(dr images -a -q)"
 alias drmcreate='drm create -d virtualbox --virtualbox-memory "4000" --virtualbox-disk-size "50000"'
 alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-share; sudo mkdir /docker-share && sudo mount -t vboxsf docker-share /docker-share"'
 
