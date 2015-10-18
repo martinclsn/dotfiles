@@ -3,6 +3,10 @@ alias b=bash
 alias h=history
 alias x=exit
 
+### Environment ###
+alias cddotfiles="cd \$(dirname \$(readlink ~/.bash_profile))"
+alias stbashextra="st .bash_extra"
+
 ### Docker ###
 alias dr=docker
 alias drnoverify="dr --tlsverify=false"
@@ -21,7 +25,6 @@ alias cddl="cd && cd Downloads"
 alias cddesktop="cd && cd Desktop"
 alias cdjboss="cd \$JBOSS_HOME"
 alias cdm2="cd ~/.m2"
-alias cddotfiles="cd \$(dirname \$(readlink ~/.bash_profile))"
 alias ls="ls --color=auto --group-directories-first"
 alias l.="ls -dF .*"
 alias la="ls -aF"
