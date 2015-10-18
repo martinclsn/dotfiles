@@ -5,7 +5,7 @@ alias x=exit
 
 ### Environment ###
 alias cddotfiles="cd \$(dirname \$(readlink ~/.bash_profile))"
-alias stbashextra="st .bash_extra"
+alias stbashextra="st ~/.bash_extra"
 
 ### Docker ###
 alias dr=docker
