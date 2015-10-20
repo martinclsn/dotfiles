@@ -10,7 +10,8 @@ shopt -s cdspell
 YELLOW='\e[1;93m'
 RESET='\e[0m'   
 
-export PS1="\[$YELLOW\][\h:\w]\[$RESET\] "
+#export PS1="\[$YELLOW\][\h:\w]\[$RESET\] "
+export PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\h:\w] \[$(tput sgr0)\]"
 
 # Larger bash history
 export HISTSIZE=32768
