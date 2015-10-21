@@ -6,11 +6,6 @@ function stl {
 	fi
 }
 
-YELLOW='\e[33m\]'
-RESET='\e[0m\]'   
-
-export PS1="\[$YELLOW\][\h:\w]\[$RESET\] "
-
 alias cdc='cd /cygdrive/c'
 alias stextra="stl ~/.bash_extra"
 alias runx="run xwin -multiwindow -noclipboard" # Alternative: startxwin
