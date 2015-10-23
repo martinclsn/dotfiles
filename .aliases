@@ -19,6 +19,8 @@ alias drrmiallimages="drrmallcontainers; dr rmi -f \$(dr images -a -q)"
 alias drmcreate='drm create -d virtualbox --virtualbox-memory "4000" --virtualbox-disk-size "50000"'
 alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-share; sudo mkdir /docker-share && sudo mount -t vboxsf docker-share /docker-share"'
 alias drstats="docker stats \$(docker ps | awk '{print $NF}' | grep -v NAMES)"
+alias draddsshkey='public_key=$(cat ~/.ssh/id_rsa.pub) && drm ssh def "echo $public_key >> .ssh/authorized_keys"'
+alias sshdockerhost="ssh docker@dockerhost"
 
 ### Navigation ###
 alias cdd="cd \$DEVELOPMENT_HOME"
