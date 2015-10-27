@@ -7,5 +7,5 @@ function stl {
 }
 
 alias cdc='cd /cygdrive/c'
-alias stextra="stl ~/.bash_extra"
+alias stbashextra="stl ~/.bash_extra"
 alias runx="run xwin -multiwindow -noclipboard" # Alternative: startxwin
