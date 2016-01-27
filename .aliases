@@ -42,6 +42,7 @@ alias grunt="grunt --stack"
 alias hglog="hg log | less"
 alias hgst="hg st -q"
 alias hgpu="hg pull -u"
+alias hgrebase="hg pull && hg shelve; hg update && hg unshelve"
 alias jbossclean="pushd . && cdjboss && cd standalone && rm -rf log tmp data deployments/* && popd"
 alias jbosslog="cdjboss && less +F standalone/log/server.log"
 alias m="mvn clean install -Dmaven.javadoc.skip=true -DdeployCheckSkip=true"
@@ -51,6 +52,7 @@ alias mvnversionupdate="mvn versions:update-properties"
 alias npmupdate="npm -g update"
 alias startjboss="cdjboss && ./bin/standalone.sh -c standalone.xml"
 alias stopjboss="\$JBOSS_HOME/bin/jboss-cli.sh --connect command=:shutdown"
+
 
 ### File handling ###
 alias grep='grep --color=auto'
