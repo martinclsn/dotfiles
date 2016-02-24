@@ -17,7 +17,7 @@ alias drrunbash="drrun --entrypoint=bash -ti"
 alias drrmallcontainers="dr rm -f \$(dr ps -q -a)"
 alias drrmiallimages="drrmallcontainers; dr rmi -f \$(dr images -a -q)"
 alias drmcreate='drm create -d virtualbox --virtualbox-memory "5000" --virtualbox-disk-size "40000"'
-alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-share; sudo mkdir /docker-share; sudo mount -t vboxsf docker-share /docker-share"'
+alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-share; sudo mkdir /docker-share; sudo mount -t vboxsf docker-share /docker-share"; drm ssh def "ls /docker-share"'
 alias drstats="docker stats \$(docker ps | awk '{print \$NF}' | grep -v NAMES)"
 alias draddsshkey='public_key=$(cat ~/.ssh/id_rsa.pub) && drm ssh def "echo $public_key >> .ssh/authorized_keys"'
 alias sshdockerhost="ssh docker@dockerhost"
