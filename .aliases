@@ -9,6 +9,7 @@ alias stbashextra="st ~/.bash_extra"
 
 ### Docker ###
 alias dr=docker
+alias drps='dr ps | less -S'
 alias drnoverify="dr --tlsverify=false"
 alias drm=docker-machine
 alias drc=docker-compose
@@ -17,7 +18,7 @@ alias drrunbash="drrun --entrypoint=bash -ti"
 alias drrmallcontainers="dr rm -f \$(dr ps -q -a)"
 alias drrmiallimages="drrmallcontainers; dr rmi -f \$(dr images -a -q)"
 alias drmcreate='drm create -d virtualbox --virtualbox-memory "5000" --virtualbox-disk-size "40000"'
-alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo rm -rf /docker-share; sudo mkdir /docker-share; sudo mount -t vboxsf docker-share /docker-share"; drm ssh def "ls /docker-share"'
+alias drmmount='drm ssh def "sudo umount -t /docker-share; sudo mkdir /docker-share; sudo mount -t vboxsf docker-share /docker-share"; drm ssh def "touch /docker-share/MOUNT_OK; ls /docker-share"'
 alias drstats="docker stats \$(docker ps | awk '{print \$NF}' | grep -v NAMES)"
 alias draddsshkey='public_key=$(cat ~/.ssh/id_rsa.pub) && drm ssh def "echo $public_key >> .ssh/authorized_keys"'
 alias sshdockerhost="ssh docker@dockerhost"
