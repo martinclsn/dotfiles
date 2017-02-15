@@ -50,6 +50,7 @@ alias m="mvn clean install -Dmaven.javadoc.skip=true -DdeployCheckSkip=true"
 alias mst="m -Dmaven.test.skip=true -DskipTests"
 alias mts=mst
 alias mvnversionupdate="mvn versions:update-properties"
+alias mvndeptree="mvn dependency:tree -Dscope=compile | less"
 alias npmupdate="npm -g update"
 alias startjboss="cdjboss && ./bin/standalone.sh -c standalone.xml"
 alias stopjboss="\$JBOSS_HOME/bin/jboss-cli.sh --connect command=:shutdown"
