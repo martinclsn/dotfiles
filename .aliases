@@ -46,6 +46,7 @@ alias hgpu="hg pull -u"
 alias hgrebase="hg pull && hg shelve; hg update && hg unshelve"
 alias jbossclean="pushd . && cdjboss && cd standalone && rm -rf log tmp data deployments/* && popd"
 alias jbosslog="cdjboss && less +F standalone/log/server.log"
+alias a='ant clean install'
 alias m="mvn clean install -Dmaven.javadoc.skip=true -DdeployCheckSkip=true"
 alias mst="m -Dmaven.test.skip=true -DskipTests"
 alias mts=mst
@@ -60,6 +61,7 @@ alias stopjboss="\$JBOSS_HOME/bin/jboss-cli.sh --connect command=:shutdown"
 alias grep='grep --color=auto'
 alias vi=vim
 alias diffexclude='diff -r --exclude=".hg" --exclude="*.iml" --exclude="target" --exclude="*.orig" --exclude=".idea"'
+alias dusort='du -ah . | grep -v "/$" | sort -rh | less'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
